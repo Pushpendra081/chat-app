@@ -5,11 +5,12 @@ import { formatMessageTime } from '../library/utils';
 const ChatContainer = ({selectedUser, setSelectedUser}) => {
     const scrollEnd = useRef()
 
-    useEffect (()=>{
+    useEffect(()=>{
         if(scrollEnd.current){
-            scrollEnd.current.scrollIntoView({behavior : "smooth"})
+            scrollEnd.current.scrollIntoView({ behavior :"smooth"})
         }
     },[])
+
   return selectedUser ? (
     <div className="h-full overflow-scroll relative backdrop-blur-lg">
 
@@ -39,7 +40,7 @@ const ChatContainer = ({selectedUser, setSelectedUser}) => {
                     </div>
                 </div>
             ))}
-            <div ref={scrollEnd}></div>
+            <div ref={scrollEnd}> </div>
         </div>
 
         {/* --- Bottom  --- */}
