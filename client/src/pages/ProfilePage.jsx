@@ -16,7 +16,7 @@ const ProfilePage = () => {
     e.preventDefault();
     if (!selectedImg){
       await updateProfile({fullName: name, bio})
-      navigate("/")
+      navigate("/");
       return;
     }
 
